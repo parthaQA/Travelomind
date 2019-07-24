@@ -26,7 +26,7 @@ public class BillingDetail   {
           bk.clickFlight();
           bk.clickSelect();
           detail = PageFactory.initElements(base.driver, Itinerary.class);
-          detail.setBillCountry();
+          //detail.setBillCountry();
           detail.billingCountryState();
           base.closeBrowser();
 

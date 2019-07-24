@@ -1,17 +1,11 @@
 package pageObjects;
 
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
 
 public class Itinerary extends BookAFlight {
 
@@ -73,10 +67,11 @@ public class Itinerary extends BookAFlight {
     }
 
 
-    public void passengerDetail() {
+    public void passengerDetail(String firstname, String lastname) {
         if (firstName.getText().isEmpty() & lastName.getText().isEmpty()) {
-            firstName.sendKeys("Partha Sen");
-            lastName.sendKeys("sen");
+            firstName.sendKeys(firstname);
+            lastName.sendKeys(lastname);
+
         }
     }
 
@@ -86,14 +81,14 @@ public class Itinerary extends BookAFlight {
         select = new Select(selectYear);
         select.selectByValue("1992");
         select = new Select(selectMonth);
-        select.selectByValue("11");
+        select.selectByValue("12");
         selectDay.click();
 
 
     }
-    public void selectGender() {
+    public void selectGender(String male) {
         select = new Select(gender);
-        select.selectByValue("1: MALE");
+        select.selectByValue(male);
     }
 
     public void selectCountryCode() {
@@ -103,26 +98,26 @@ public class Itinerary extends BookAFlight {
 
     }
 
-      public void selectcardInfo() {
+      public void selectcardInfo(String crdHoldername,String Securitycode, String phnum, String emailid, String crdnumber) {
 
           if (phoneNumber.getText().isEmpty() & email.getText().isEmpty() & cardNumber.getText().isEmpty()
                   & cardHolderName.getText().isEmpty()) {
-              phoneNumber.sendKeys("8828162737");
-              email.sendKeys("partha.senuwsb@gmail.com");
-              cardNumber.sendKeys("4111111111111111");
-              cardHolderName.sendKeys("partha sen");
-              cvv.sendKeys("456");
+              phoneNumber.sendKeys(phnum);
+              email.sendKeys(emailid);
+              cardNumber.sendKeys(crdnumber);
+              cardHolderName.sendKeys(crdHoldername);
+              cvv.sendKeys(Securitycode);
           }
 
       }
 
 
-        public void selectCardExpirationDetail(){
+        public void selectCardExpirationDetail(String expiremnth,String expireyr){
 
         select = new Select(month);
-        select.selectByValue("11: 11");
+        select.selectByValue(expiremnth);
         select = new Select(year);
-        select.selectByValue("5: 2023");
+        select.selectByValue(expireyr);
 
     }
 
@@ -134,11 +129,11 @@ public class Itinerary extends BookAFlight {
 
     }
 
-    public void billInfo(){
-        billAddress.sendKeys("Saltlake city");
-        billCity.sendKeys("Kolkata");
-        zipCode.sendKeys("700111");
-        billPhNumber.sendKeys("8828");
+    public void billInfo(String city, String address,String zip,String num){
+        billAddress.sendKeys(address);
+        billCity.sendKeys(city);
+        zipCode.sendKeys(zip);
+        billPhNumber.sendKeys(num);
     }
 
     public void setBillCountry() throws InterruptedException {

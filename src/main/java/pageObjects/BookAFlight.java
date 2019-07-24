@@ -34,7 +34,6 @@ public class BookAFlight  {
     public void clickFlight()  {
         wait=new WebDriverWait(driver, 20);
         flight.click();
-        wait.withMessage("waiting for element");
 
 
     }

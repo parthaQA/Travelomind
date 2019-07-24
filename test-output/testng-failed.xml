@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Travelomind suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Travelomind(failed)">
     <classes>
       <class name="testCases.BookFlight">
         <methods>
-          <include name="bookFlight"/>
+          <include name="bookFlight" invocation-numbers="0"/>
         </methods>
       </class> <!-- testCases.BookFlight -->
     </classes>
   </test> <!-- Travelomind(failed) -->
-</suite> <!-- Failed suite [Travelomind suite] -->
+</suite> <!-- Failed suite [Default Suite] -->

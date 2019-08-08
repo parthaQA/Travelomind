@@ -5,7 +5,9 @@
     <classes>
       <class name="testCases.BookFlight">
         <methods>
+          <include name="launchBrowser"/>
           <include name="bookFlight" invocation-numbers="0"/>
+          <include name="takeScreenshot"/>
         </methods>
       </class> <!-- testCases.BookFlight -->
     </classes>

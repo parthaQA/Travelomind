@@ -1,34 +1,38 @@
 package testCases;
 
 import base.BaseTC;
+import listener.Listener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.BookAFlight;
 import pageObjects.Itinerary;
 import base.BaseTC;
 
-public class BillingDetail   {
+
+@Listeners(Listener.class)
+public class BillingDetail extends BaseTC   {
 
 
-    BaseTC base;
+    BookAFlight bk;
     Itinerary detail;
+    ITestResult result;
 
 
   @Test(priority = 0)
   public void getCountryList()  {
 
       try {
-          base = new BaseTC();
-          base.launchBrowser();
-          BookAFlight bk = PageFactory.initElements(base.driver, BookAFlight.class);
+
+          bk = PageFactory.initElements(BaseTC.driver, BookAFlight.class);
           bk.clickFlight();
           bk.clickSelect();
-          detail = PageFactory.initElements(base.driver, Itinerary.class);
-          //detail.setBillCountry();
+          detail = PageFactory.initElements(BaseTC.driver, Itinerary.class);
           detail.billingCountryState();
-          base.closeBrowser();
 
       } catch (Exception e) {
           System.out.println(e.getMessage());

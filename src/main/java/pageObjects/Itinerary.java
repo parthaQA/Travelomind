@@ -5,11 +5,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Itinerary extends BookAFlight {
+
+public class Itinerary  {
 
     Select select;
+    WebDriver driver;
 
     @FindBy(how = How.ID,using = "nm0")
     WebElement firstName;
@@ -35,13 +39,13 @@ public class Itinerary extends BookAFlight {
     WebElement year;
     @FindBy(how = How.ID,using = "cvv1")
     WebElement cvv;
-    @FindBy(how = How.ID,using = "cntry")
+    @FindBy(how = How.CSS,using = "#cntry")
      WebElement billCountry;
     @FindBy(how = How.ID,using = "billAddr")
     WebElement billAddress;
     @FindBy(how = How.ID,using = "cty")
     WebElement billCity;
-    @FindBy(how = How.ID,using = "st")
+    @FindBy(how = How.CSS,using = "#st")
     WebElement billState;
     @FindBy(how = How.ID,using = "zipCode")
     WebElement zipCode;
@@ -62,8 +66,9 @@ public class Itinerary extends BookAFlight {
     @FindBy(how = How.CSS,using = "#traveller > div > form > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div.inlineErrMgs.ng-star-inserted > span")
     WebElement error;
 
-    public Itinerary(WebDriver driver) {
-        super(driver);
+    public Itinerary(WebDriver driver)
+    {
+        this.driver=driver;
     }
 
 
@@ -122,10 +127,18 @@ public class Itinerary extends BookAFlight {
     }
 
     public void billingCountryState(){
-        select = new Select(billCountry);
-        System.out.println(billCountry.getText());
-        select = new Select(billState);
-        System.out.println(billState.getText());
+        try {
+            Thread.sleep(4000);
+            select = new Select(billCountry);
+            System.out.println("************Country List**************");
+            System.out.println(billCountry.getText());
+            System.out.println("************State List**************");
+            select = new Select(billState);
+            System.out.println(billState.getText());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
 
     }
 

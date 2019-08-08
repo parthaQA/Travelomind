@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="testCases.BookFlight" class="method navigator-link" hash-for-method="bookFlight(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, ...)">bookFlight(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, ...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="testCases.ModifySearchTC" class="method navigator-link" hash-for-method="getButtonDetails">getButtonDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -120,15 +120,14 @@
           <div class="suite-Default_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.BookFlight</span>
+              <span class="class-name">testCases.ModifySearchTC</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="bookFlight(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, ...)">
-                  </a> <!-- bookFlight(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, ...) -->
-                  <span class="method-name">bookFlight</span>
-                  <span class="parameters">(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, Saltlake, 700091, 8828162737, 2: 02, 5: 2023, 1: MALE)</span>
+                  <a name="getButtonDetails">
+                  </a> <!-- getButtonDetails -->
+                  <span class="method-name">getButtonDetails</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -145,11 +144,11 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Travelomind&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.BookFlight&quot;&gt;
+      &lt;class name=&quot;testCases.ModifySearchTC&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;bookFlight&quot;/&gt;
+          &lt;include name=&quot;getButtonDetails&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testCases.BookFlight --&gt;
+      &lt;/class&gt; &lt;!-- testCases.ModifySearchTC --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Travelomind --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -191,14 +190,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'bookFlight')
-data.setCell(0, 2, 'testCases.BookFlight')
-data.setCell(0, 3, 59985);
+data.setCell(0, 1, 'getButtonDetails')
+data.setCell(0, 2, 'testCases.ModifySearchTC')
+data.setCell(0, 3, 705);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 59 seconds</span>
+              <span class="suite-total-time">Total running time: 705 ms</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -224,11 +223,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.BookFlight</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">bookFlight(Partha, Sen, Kolkata, Partha Sen Tinku, 123, 8828162737, partha.senuwsb@gmail.com, 411111111111111, ...)</span>
+              <div class="chronological-class-name">testCases.ModifySearchTC</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getButtonDetails</span>
+                <span class="method-start">19837 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">takeScreenshot([TestResult name=getButtonDetails status=SUCCESS method=ModifySearchTC.getButtonDetails()[pri:0, ins...)</span>
+                <span class="method-start">20543 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

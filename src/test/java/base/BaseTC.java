@@ -58,7 +58,7 @@ public class BaseTC {
             e.printStackTrace();
         }
 
-        driver.close();
+        //driver.close();
     }}
 
 

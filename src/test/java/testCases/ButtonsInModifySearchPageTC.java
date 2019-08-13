@@ -1,17 +1,21 @@
 package testCases;
 
 import base.BaseTC;
+import listener.Listener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.BookAFlight;
 import pageObjects.ModifySearch;
 
-
-public class ModifySearchTC extends BaseTC {
+@Listeners(Listener.class)
+public class ButtonsInModifySearchPageTC extends BaseTC {
 
     ModifySearch pageInit;
     BookAFlight book;
+
 
     @Test
     public void getButtonDetails(){
@@ -26,6 +30,7 @@ public class ModifySearchTC extends BaseTC {
             pageInit.VerifyButtonStatus();
             //Thread.sleep(3000);
             pageInit.ButtonStatusToOneWay();
+
 
 
         }

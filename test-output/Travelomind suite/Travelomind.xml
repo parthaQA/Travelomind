@@ -4,6 +4,6 @@
   <testcase classname="testCases.BookFlight" name="bookFlight" time="31.539"/>
   <testcase classname="testCases.BillingDetail" name="getCountryList" time="13.738"/>
   <testcase classname="testCases.ShowAllFlights" name="showAllFlights" time="1.413"/>
-  <testcase classname="testCases.ModifySearchTC" name="navigateTolistPage" time="20.449"/>
+  <testcase classname="testCases.ButtonsInModifySearchPageTC" name="navigateTolistPage" time="20.449"/>
   <testcase classname="testCases.VoiceOfCustomerTC" name="executeVocTc" time="2.985"/>
 </testsuite> <!-- Travelomind -->

@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/testCases/ModifySearchTC.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/testCases/ButtonsInModifySearchPageTC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+            <state relative-caret-position="399">
+              <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,22 +28,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/base/BaseTC.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BookAFlight.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/testCases/SeachingFlightsFromModifySearchPageTc.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/FilterYourPreferences.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/testCases/FilteringSearchResultsTC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,11 +66,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/ModifySearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="688">
+              <caret line="180" column="28" selection-start-line="180" selection-start-column="28" selection-end-line="180" selection-end-column="28" />
               <folding>
-                <element signature="e#955#956#0" expanded="true" />
-                <element signature="e#991#992#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,13 +119,17 @@
         <option value="$PROJECT_DIR$/TestNG.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/BookAFlight.java" />
         <option value="$PROJECT_DIR$/src/test/java/testCases/BillingDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Itinerary.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/HomePageLinks.java" />
         <option value="$PROJECT_DIR$/src/main/java/pageObjects/MySearches.java" />
         <option value="$PROJECT_DIR$/src/test/java/testCases/MySearches.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/Itinerary.java" />
         <option value="$PROJECT_DIR$/src/test/java/base/BaseTC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pageObjects/ModifySearch.java" />
         <option value="$PROJECT_DIR$/src/test/java/testCases/ModifySearchTC.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testCases/ButtonsInModifySearchPageTC.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testCases/SeachingFlightsFromModifySearchPageTc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/ModifySearch.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testCases/FilteringSearchResultsTC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pageObjects/FilterYourPreferences.java" />
       </list>
     </option>
   </component>
@@ -148,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +174,6 @@
             <path>
               <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
               <item name="Travelomind" type="462c0819:PsiDirectoryNode" />
-              <item name="Screenshots" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travelomind" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -177,14 +188,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travelomind" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="excelReader" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
@@ -213,15 +216,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Travelomind" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
+              <item name="dataProvider" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Travelomind" type="b2602c69:ProjectViewProjectNode" />
@@ -241,7 +236,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,27 +267,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ModifySearchTC.getButtonDetails">
-    <configuration name="C:/Users/XPO8584/IdeaProjects/Travelomind/TestNG.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Travelomind" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/TestNG.xml" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="true" />
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomePageLinksTC" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.FilteringSearchResultsTC.filterSearch">
+    <configuration name="ButtonsInModifySearchPageTC" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Travelomind" />
       <extension name="coverage">
         <pattern>
@@ -303,7 +278,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="testCases" />
-      <option name="MAIN_CLASS_NAME" value="testCases.HomePageLinksTC" />
+      <option name="MAIN_CLASS_NAME" value="testCases.ButtonsInModifySearchPageTC" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="PARAMETERS" value="" />
@@ -319,7 +294,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModifySearchTC" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ButtonsInModifySearchPageTC.getButtonDetails" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Travelomind" />
       <extension name="coverage">
         <pattern>
@@ -329,33 +304,7 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="testCases" />
-      <option name="MAIN_CLASS_NAME" value="testCases.ModifySearchTC" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="true" />
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ModifySearchTC.getButtonDetails" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Travelomind" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="testCases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="testCases" />
-      <option name="MAIN_CLASS_NAME" value="testCases.ModifySearchTC" />
+      <option name="MAIN_CLASS_NAME" value="testCases.ButtonsInModifySearchPageTC" />
       <option name="METHOD_NAME" value="getButtonDetails" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -372,7 +321,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModifySearchTC.navigateTolistPage" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ButtonsInModifySearchPageTC.navigateTolistPage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Travelomind" />
       <extension name="coverage">
         <pattern>
@@ -382,8 +331,62 @@
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="testCases" />
-      <option name="MAIN_CLASS_NAME" value="testCases.ModifySearchTC" />
+      <option name="MAIN_CLASS_NAME" value="testCases.ButtonsInModifySearchPageTC" />
       <option name="METHOD_NAME" value="navigateTolistPage" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FilteringSearchResultsTC.filterSearch" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Travelomind" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="testCases" />
+      <option name="MAIN_CLASS_NAME" value="testCases.FilteringSearchResultsTC" />
+      <option name="METHOD_NAME" value="filterSearch" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Travelomind" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="testCases" />
+      <option name="MAIN_CLASS_NAME" value="testCases.SeachingFlightsFromModifySearchPageTc" />
+      <option name="METHOD_NAME" value="searchFlight" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -419,11 +422,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ModifySearchTC.getButtonDetails" />
-        <item itemvalue="TestNG.ModifySearchTC" />
-        <item itemvalue="TestNG.ModifySearchTC.navigateTolistPage" />
-        <item itemvalue="TestNG.C:/Users/XPO8584/IdeaProjects/Travelomind/TestNG.xml" />
-        <item itemvalue="TestNG.HomePageLinksTC" />
+        <item itemvalue="TestNG.FilteringSearchResultsTC.filterSearch" />
+        <item itemvalue="TestNG.SeachingFlightsFromModifySearchPageTc.searchFlight" />
+        <item itemvalue="TestNG.ButtonsInModifySearchPageTC.getButtonDetails" />
+        <item itemvalue="TestNG.ButtonsInModifySearchPageTC" />
+        <item itemvalue="TestNG.ButtonsInModifySearchPageTC.navigateTolistPage" />
       </list>
     </recent_temporary>
   </component>
@@ -441,41 +444,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 06m 03s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 18h 31m 30s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 15m 32s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 18h 48m 07s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 21m 12s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 16m 12s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 23m 49s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 17m 24s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 32m 09s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 24m 15s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 37m 15s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 25m 53s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 41m 44s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 26m 56s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 45m 51s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="SeachingFlightsFromModifySearchPageTc_searchFlight - 2019.08.12 at 19h 30m 31s.xml">
+      <configuration name="SeachingFlightsFromModifySearchPageTc.searchFlight" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 50m 58s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="FilteringSearchResultsTC_filterSearch - 2019.08.12 at 22h 03m 26s.xml">
+      <configuration name="FilteringSearchResultsTC.filterSearch" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ModifySearchTC_getButtonDetails - 2019.08.08 at 00h 55m 04s.xml">
-      <configuration name="ModifySearchTC.getButtonDetails" configurationId="TestNG" />
+    <history-entry file="FilteringSearchResultsTC_filterSearch - 2019.08.12 at 22h 10m 58s.xml">
+      <configuration name="FilteringSearchResultsTC.filterSearch" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25642964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2677761" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -552,14 +555,6 @@
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/testCases/ModifySearchTC.java</url>
-          <line>16</line>
-          <properties class="testCases.ModifySearchTC" method="getButtonDetails">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="PageFactory.initElements();" language="JAVA" mode="CODE_FRAGMENT" />
           <url>file://$PROJECT_DIR$/src/test/java/testCases/HomePageLinksTC.java</url>
@@ -632,16 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="607" selection-start-line="607" selection-end-line="607" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dataProvider/BillingDetailsDataProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,28 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Itinerary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="130" column="31" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2773#2774#0" expanded="true" />
-            <element signature="e#2807#2808#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/BillingDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testCases/HomePageLinksTC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -786,10 +749,10 @@
     <entry file="file://$PROJECT_DIR$/Screenshots/navigateTolistPage.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BookAFlight.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/Itinerary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="2737">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -798,8 +761,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/base/BaseTC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="42" column="35" lean-forward="true" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        <state relative-caret-position="626">
+          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/BookAFlight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/BillingDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="26" selection-start-line="16" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/ButtonsInModifySearchPageTC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dataProvider/BillingDetailsDataProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/SeachingFlightsFromModifySearchPageTc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -808,19 +821,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/ModifySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="688">
+          <caret line="180" column="28" selection-start-line="180" selection-start-column="28" selection-end-line="180" selection-end-column="28" />
           <folding>
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/ModifySearchTC.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pageObjects/FilterYourPreferences.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
+        <state relative-caret-position="263">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testCases/FilteringSearchResultsTC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

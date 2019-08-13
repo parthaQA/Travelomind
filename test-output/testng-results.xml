@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-07T19:24:38Z" name="Default Suite" finished-at="2019-08-07T19:25:03Z" duration-ms="25198">
+  <suite started-at="2019-08-12T16:40:21Z" name="Default Suite" finished-at="2019-08-12T16:40:56Z" duration-ms="34765">
     <groups>
     </groups>
-    <test started-at="2019-08-07T19:24:38Z" name="Travelomind" finished-at="2019-08-07T19:25:03Z" duration-ms="25198">
-      <class name="testCases.ModifySearchTC">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.ModifySearchTC@fe18270]" started-at="2019-08-07T19:24:38Z" name="launchBrowser" finished-at="2019-08-07T19:24:58Z" duration-ms="19837" status="PASS">
+    <test started-at="2019-08-12T16:40:21Z" name="Travelomind" finished-at="2019-08-12T16:40:56Z" duration-ms="34765">
+      <class name="testCases.FilteringSearchResultsTC">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testCases.FilteringSearchResultsTC@5d11346a]" started-at="2019-08-12T16:40:21Z" name="launchBrowser" finished-at="2019-08-12T16:40:47Z" duration-ms="25977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="getButtonDetails()[pri:0, instance:testCases.ModifySearchTC@fe18270]" started-at="2019-08-07T19:24:58Z" name="getButtonDetails" finished-at="2019-08-07T19:24:59Z" duration-ms="705" status="PASS">
+        <test-method signature="filterSearch()[pri:0, instance:testCases.FilteringSearchResultsTC@5d11346a]" started-at="2019-08-12T16:40:47Z" name="filterSearch" finished-at="2019-08-12T16:40:55Z" duration-ms="7921" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getButtonDetails -->
-        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:testCases.ModifySearchTC@fe18270]" started-at="2019-08-07T19:24:59Z" name="takeScreenshot" finished-at="2019-08-07T19:25:03Z" duration-ms="4623" status="PASS">
+        </test-method> <!-- filterSearch -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:testCases.FilteringSearchResultsTC@5d11346a]" started-at="2019-08-12T16:40:55Z" name="takeScreenshot" finished-at="2019-08-12T16:40:56Z" duration-ms="788" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getButtonDetails status=SUCCESS method=ModifySearchTC.getButtonDetails()[pri:0, instance:testCases.ModifySearchTC@fe18270] output={null}]]]>
+                <![CDATA[[TestResult name=filterSearch status=SUCCESS method=FilteringSearchResultsTC.filterSearch()[pri:0, instance:testCases.FilteringSearchResultsTC@5d11346a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshot -->
-      </class> <!-- testCases.ModifySearchTC -->
+      </class> <!-- testCases.FilteringSearchResultsTC -->
     </test> <!-- Travelomind -->
   </suite> <!-- Default Suite -->
 </testng-results>

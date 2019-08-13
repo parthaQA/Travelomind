@@ -6,7 +6,7 @@
             <class name="testCases.BookFlight"></class>
             <class name="testCases.BillingDetail"></class>
             <class name="testCases.ShowAllFlights"></class>
-            <class name="testCases.ModifySearchTC"></class>
+            <class name="testCases.ButtonsInModifySearchPageTC"></class>
             <class name="testCases.VoiceOfCustomerTC"></class>
         </classes>
     </test>

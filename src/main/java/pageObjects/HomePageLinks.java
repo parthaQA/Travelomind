@@ -4,17 +4,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import pageObjectConfiguation.Configuration;
 
 import java.util.List;
 
 public class HomePageLinks {
 
     WebDriver driver;
-    @FindBy(how = How.TAG_NAME,using = "link")
+    @FindBy(how = How.TAG_NAME,using = Configuration.link)
     List<WebElement> link;
-    @FindBy(how = How.TAG_NAME, using = "a")
+    @FindBy(how = How.TAG_NAME, using = Configuration.anchor)
     List<WebElement> anchor;
-    @FindBy(how = How.TAG_NAME, using = "img")
+    @FindBy(how = How.TAG_NAME, using = Configuration.image)
     List<WebElement> image;
 
 

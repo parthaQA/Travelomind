@@ -3,29 +3,35 @@ package pageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.*;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.function.Supplier;
+import pageObjectConfiguation.Configuration;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 public class BookAFlight {
 
     public WebDriver driver;
-    @FindBy(how = How.XPATH, using = "//*[@id=\"header\"]/div[2]/div[1]/div[2]/table/tbody/tr[1]")
+    //@FindBy(how = How.XPATH, using = "//*[@id=\"header\"]/div[2]/div[1]/div[2]/table/tbody/tr[1]")
+    //WebElement flight;
+    @FindBy(how = How.XPATH, using = Configuration.flight)
     WebElement flight;
-    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Los Angeles (LAX)')")
+    @FindBy(how = How.XPATH, using =Configuration.los)
     WebElement los;
-    @FindBy(how = How.XPATH, using = "//*[contains(text(),'Miami (MIA)')")
+    @FindBy(how = How.XPATH, using = Configuration.mia)
     WebElement mia;
-    @FindBy(how = How.XPATH, using = "//img[@src='../../../assets/select.png']")
+    @FindBy(how = How.XPATH, using = Configuration.select)
     WebElement select;
-    @FindBy(how = How.CSS, using = "body > app-root > div > app-all-flights > div.boundaryCheck > div > div > div.row.noMargin.contentBar > div.noPadding.contentPanel > div.tabPanel > div > div > div:nth-child(2) > div.flightDtl.relative.cursor.cheapest > div.row.priceHeader > div.col-md-6 > span.finalPrice")
+    @FindBy(how = How.CSS, using = Configuration.searchPageFare)
     WebElement searchPageFare;
 
 
     WebDriverWait wait;
 
-    public BookAFlight(WebDriver driver) {
+    public BookAFlight(WebDriver driver) throws IOException {
         this.driver = driver;
         wait = new WebDriverWait(this.driver, 20);
     }
@@ -34,20 +40,18 @@ public class BookAFlight {
 
 
 
-
-
-   public void clickFlight()  {
+   public ModifySearch clickFlight()  {
         flight.click();
 
-
+     return PageFactory.initElements(driver,ModifySearch.class);
     }
 
-   public String clickSelect(){
+   public Itinerary clickSelect(){
         WebElement s;
         s=wait.until(ExpectedConditions.visibilityOf(select));
         s.click();
-        String amt=verifySearchPageAmt();
-        return amt;
+
+        return PageFactory.initElements(driver,Itinerary.class);
     }
 
     public String verifySearchPageAmt(){

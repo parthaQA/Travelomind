@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjectConfiguation.Configuration;
 
 import java.util.List;
 
@@ -18,21 +19,21 @@ public class FilterYourPreferences {
     WebDriverWait wait;
     JavascriptExecutor js;
 
-    @FindBy(how = How.ID,using = "collapseAirport")
+    @FindBy(how = How.ID,using = Configuration.airport)
     WebElement airport;
-    @FindBy(how = How.CLASS_NAME,using= "sameairport")
+    @FindBy(how = How.CLASS_NAME,using= Configuration.sameAirport)
     WebElement sameAirport;
-    @FindBy(how = How.XPATH,using= "//span[contains(text(),'Same Departing / Returning Airport')]")
+    @FindBy(how = How.XPATH,using= Configuration.returnAirport)
     WebElement returnAirport;
-    @FindBy(how = How.XPATH,using = "//div[@id='collapseAirport']//div[3]")
+    @FindBy(how = How.XPATH,using = Configuration.departingFrom)
     WebElement departingFrom;
-    @FindBy(how = How.CLASS_NAME,using = "airlineName")
+    @FindBy(how = How.CLASS_NAME,using = Configuration.airlineName)
     List<WebElement> airlineName;
-    @FindBy(how = How.XPATH,using = "//div[@id='collapseAirport']//div[4]")
+    @FindBy(how = How.XPATH,using = Configuration.arrivingAt)
     WebElement arrivingAt;
-    @FindBy(how = How.XPATH,using = "//div[@id='collapseAirline']")
+    @FindBy(how = How.XPATH,using = Configuration.airlines)
     WebElement airlines;
-    @FindBy(how = How.CLASS_NAME,using = "airline")
+    @FindBy(how = How.CLASS_NAME,using = Configuration.airlineList)
     List<WebElement> airlineList;
     String airline="airlineName";
 

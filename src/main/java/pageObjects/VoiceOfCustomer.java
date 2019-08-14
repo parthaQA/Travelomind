@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import pageObjectConfiguation.Configuration;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -13,12 +14,12 @@ import java.util.Set;
 public class VoiceOfCustomer {
 
     WebDriver driver;
-    @FindBy(how = How.XPATH,using = "//*[@id=\"navbar\"]/div[7]/span")
+    @FindBy(how = How.XPATH,using = Configuration.voc)
     WebElement voc;
     Set<String> window;
-    @FindBy(how = How.XPATH,using = "//*[@id=\"reviewContainer\"]/div/div[2]/div[2]/p")
+    @FindBy(how = How.XPATH,using = Configuration.americanAir)
     WebElement americanAir;
-    @FindBy(how = How.XPATH,using = "//*[@id=\"domestic\"]/img[2]")
+    @FindBy(how = How.XPATH,using = Configuration.forwardArrow)
     WebElement forwardArrow;
 
 

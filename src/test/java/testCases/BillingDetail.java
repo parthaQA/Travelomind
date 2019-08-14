@@ -30,8 +30,8 @@ public class BillingDetail extends BaseTC   {
 
           bk = PageFactory.initElements(BaseTC.driver, BookAFlight.class);
           bk.clickFlight();
-          bk.clickSelect();
-          detail = PageFactory.initElements(BaseTC.driver, Itinerary.class);
+          detail=bk.clickSelect();
+          //detail = PageFactory.initElements(BaseTC.driver, Itinerary.class);
           detail.billingCountryState();
 
       } catch (Exception e) {

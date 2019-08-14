@@ -22,9 +22,9 @@ public class ButtonsInModifySearchPageTC extends BaseTC {
 
 
         try {
-            pageInit= PageFactory.initElements(BaseTC.driver, ModifySearch.class);
+            //pageInit= PageFactory.initElements(BaseTC.driver, ModifySearch.class);
             book=PageFactory.initElements(BaseTC.driver,BookAFlight.class);
-            book.clickFlight();
+            pageInit=book.clickFlight();
             pageInit.countRadioButtons();
             pageInit.getRadioButtonText();
             pageInit.VerifyButtonStatus();

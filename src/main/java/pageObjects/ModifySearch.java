@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjectConfiguation.Configuration;
 
 import java.util.List;
 
@@ -19,46 +20,46 @@ public class ModifySearch {
     WebDriverWait wait;
     JavascriptExecutor js;
 
-     @FindBy(how = How.XPATH,using = "//div[contains(@class,'noMargin headerBar relative')]//img[contains(@class,'callImage')]")
+     @FindBy(how = How.XPATH,using = Configuration.imagewait)
      WebElement imagewait;
-    @FindBy(how = How.XPATH, using = "//div[@id='round_trip']")
+    @FindBy(how = How.XPATH, using =Configuration.radio)
     WebElement radio;
-    @FindBy(how = How.TAG_NAME, using = "input")
+    @FindBy(how = How.TAG_NAME, using = Configuration.rButtons)
     List<WebElement> rButtons;
-    @FindBy(how = How.XPATH, using = "//div[@id='round_trip']//input[1]")
+    @FindBy(how = How.XPATH, using = Configuration.oneWayButton)
     WebElement oneWayButton;
-    @FindBy(how = How.XPATH, using = "//body//input[2]")
+    @FindBy(how = How.XPATH, using = Configuration.roundTripButton)
     WebElement roundTripButton;
-    @FindBy(how = How.XPATH, using = "//input[contains(@placeholder,'Origin')]")
+    @FindBy(how = How.XPATH, using = Configuration.origin)
     WebElement origin;
-    @FindBy(how = How.XPATH,using = "//div[@id='traveller_menu']")
+    @FindBy(how = How.XPATH,using = Configuration.originTmenu)
     WebElement originTmenu;
     //@FindBy(how = How.XPATH, using = "//div[contains(@class,'filterSidePanel')]//div[contains(@class,'row')]//div[2]//div[1]//span[3]")
    // WebElement originAirpot;
-    @FindBy(how = How.XPATH, using = "//input[contains(@placeholder,'Destination')]")
+    @FindBy(how = How.XPATH, using = Configuration.destination)
     WebElement destination;
-    @FindBy(how = How.XPATH, using = "//div[@id='traveller_menu2']")
+    @FindBy(how = How.XPATH, using = Configuration.destionationTmenu)
     WebElement destionationTmenu;
-    @FindBy(how = How.XPATH, using = "//input[@placeholder='Depart']")
+    @FindBy(how = How.XPATH, using = Configuration.depart)
     WebElement depart;
-    @FindBy(how = How.XPATH, using = "//input[contains(@placeholder,'Return')]")
+    @FindBy(how = How.XPATH, using = Configuration.retrn)
     WebElement retrn;
-    @FindBy(how = How.XPATH, using = "//select[@title='Select month']")
+    @FindBy(how = How.XPATH, using = Configuration.modifyMonth)
     WebElement month;
-    @FindBy(how = How.XPATH, using = "//select[@title='Select year']")
+    @FindBy(how = How.XPATH, using = Configuration.modifyYear)
     WebElement year;
-    @FindBy(how = How.XPATH,using = "//div[@class='btn-light ng-star-inserted'][contains(text(),'28')]")
+    @FindBy(how = How.XPATH,using = Configuration.date)
     WebElement date;
-    @FindBy(how = How.XPATH, using = "//ngb-datepicker-navigation-select[contains(@class,'ngb-dp-navigation-select')]")
+    @FindBy(how = How.XPATH, using = Configuration.returnjourneydate)
     WebElement returnjourneydate;
     //@FindBy(how = How.CSS,using = "div.container-fluid.noPaddingOnMobile div.boundaryCheck:nth-child(1) div.container-fluid.noPadding div.containerClass div.row.noMargin.contentBar:nth-child(4) div.noPadding.filterSidePanel:nth-child(2) div.filterWrapper form.ng-valid.ng-dirty.ng-touched div.row.mt-3:nth-child(3) div.col-sm-6.col-md-6:nth-child(2) div.input-group ngb-datepicker.dropdown-menu.show div.ngb-dp-header.bg-light ngb-datepicker-navigation:nth-child(1) ngb-datepicker-navigation-select.ngb-dp-navigation-select:nth-child(2) > select.custom-select:nth-child(1)")
     //WebElement retrnMonth;
     //@FindBy(how = How.CSS,using = "div.container-fluid.noPaddingOnMobile div.boundaryCheck:nth-child(1) div.container-fluid.noPadding div.containerClass div.row.noMargin.contentBar:nth-child(4) div.noPadding.filterSidePanel:nth-child(2) div.filterWrapper form.ng-valid.ng-dirty.ng-touched div.row.mt-3:nth-child(3) div.col-sm-6.col-md-6:nth-child(2) div.input-group ngb-datepicker.dropdown-menu.show div.ngb-dp-header.bg-light ngb-datepicker-navigation:nth-child(1) ngb-datepicker-navigation-select.ngb-dp-navigation-select:nth-child(2) > select.custom-select:nth-child(2)")
     //WebElement retrnYear;
-    @FindBy(how = How.XPATH,using = "//div[@class='btn-light ng-star-inserted'][contains(text(),'30')]")
+    @FindBy(how = How.XPATH,using = Configuration.retrnDate)
     WebElement retrnDate;
 
-    @FindBy(how = How.XPATH,using = "//button[contains(text(),'Search Online')]")
+    @FindBy(how = How.XPATH,using = Configuration.searchOnline)
     WebElement searchOnline;
     List<WebElement> radioBtnCounts;
     List<WebElement> radioBtntext;

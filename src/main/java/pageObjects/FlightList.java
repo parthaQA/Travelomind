@@ -7,13 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjectConfiguation.Configuration;
 
 import java.beans.Visibility;
 
 public class FlightList {
 
     public WebDriver driver;
-    @FindBy(how = How.CLASS_NAME,using = "ng-star-inserted")
+    @FindBy(how = How.CLASS_NAME,using = Configuration.flightList)
     WebElement flightList;
     WebElement l;
     BookAFlight book;

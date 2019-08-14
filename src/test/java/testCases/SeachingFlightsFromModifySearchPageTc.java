@@ -22,8 +22,8 @@ public class SeachingFlightsFromModifySearchPageTc extends BaseTC {
     public void searchFlight() throws InterruptedException {
 
         book= PageFactory.initElements(BaseTC.driver,BookAFlight.class);
-        modify=PageFactory.initElements(BaseTC.driver,ModifySearch.class);
-        book.clickFlight();
+        //modify=PageFactory.initElements(BaseTC.driver,ModifySearch.class);
+        modify=book.clickFlight();
         String actualOrigin=modify.selectOriginPlace();
         Assert.assertEquals(actualOrigin,expectedOrigin);
         String actualReturn=modify.selectReturnPlace();

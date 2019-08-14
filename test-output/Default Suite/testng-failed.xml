@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Travelomind(failed)">
     <classes>
-      <class name="testCases.FilteringSearchResultsTC">
+      <class name="testCases.SeachingFlightsFromModifySearchPageTc">
         <methods>
           <include name="launchBrowser"/>
-          <include name="filterSearch"/>
+          <include name="searchFlight"/>
           <include name="takeScreenshot"/>
         </methods>
-      </class> <!-- testCases.FilteringSearchResultsTC -->
+      </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
     </classes>
   </test> <!-- Travelomind(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

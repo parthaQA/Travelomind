@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjectConfiguation.Configuration;
 
 
 public class Itinerary  {
@@ -15,55 +16,55 @@ public class Itinerary  {
     Select select;
     WebDriver driver;
 
-    @FindBy(how = How.ID,using = "nm0")
+    @FindBy(how = How.ID,using = Configuration.firstName)
     WebElement firstName;
-    @FindBy(how = How.XPATH,using = "//input[@type='text]'")
+    @FindBy(how = How.XPATH,using = Configuration.middleName)
     WebElement middleName;
-    @FindBy(how = How.ID,using = "lm0")
+    @FindBy(how = How.ID,using = Configuration.lastName)
     WebElement lastName;
-    @FindBy(how = How.CSS,using = "#gender0")
+    @FindBy(how = How.CSS,using = Configuration.gender)
     WebElement gender;
-    @FindBy(how = How.ID,using = "contry")
+    @FindBy(how = How.ID,using = Configuration.countryCode)
     WebElement countryCode;
-    @FindBy(how = How.NAME,using = "phn")
+    @FindBy(how = How.NAME,using = Configuration.phoneNumber)
     WebElement phoneNumber;
-    @FindBy(how = How.ID,using = "eml")
+    @FindBy(how = How.ID,using = Configuration.email)
     WebElement email;
-    @FindBy(how = How.ID,using = "crdno1")
+    @FindBy(how = How.ID,using = Configuration.cardNumber)
     WebElement cardNumber;
-    @FindBy(how = How.ID,using = "nmeOnCd1")
+    @FindBy(how = How.ID,using = Configuration.cardHolderName)
     WebElement cardHolderName;
-    @FindBy(how = How.ID,using = "month1")
+    @FindBy(how = How.ID,using = Configuration.month)
     WebElement month;
-    @FindBy(how = How.ID,using = "year1")
+    @FindBy(how = How.ID,using = Configuration.year)
     WebElement year;
-    @FindBy(how = How.ID,using = "cvv1")
+    @FindBy(how = How.ID,using = Configuration.cvv)
     WebElement cvv;
-    @FindBy(how = How.CSS,using = "#cntry")
+    @FindBy(how = How.CSS,using = Configuration.billCountry)
      WebElement billCountry;
-    @FindBy(how = How.ID,using = "billAddr")
+    @FindBy(how = How.ID,using = Configuration.billAddress)
     WebElement billAddress;
-    @FindBy(how = How.ID,using = "cty")
+    @FindBy(how = How.ID,using = Configuration.billCity)
     WebElement billCity;
-    @FindBy(how = How.CSS,using = "#st")
+    @FindBy(how = How.CSS,using = Configuration.billState)
     WebElement billState;
-    @FindBy(how = How.ID,using = "zipCode")
+    @FindBy(how = How.ID,using = Configuration.zipCode)
     WebElement zipCode;
-    @FindBy(how = How.ID,using = "phnNumber")
+    @FindBy(how = How.ID,using = Configuration.billPhNumber)
     WebElement billPhNumber;
-    @FindBy(how = How.ID,using = "dob0")
+    @FindBy(how = How.ID,using = Configuration.dateOfBirth)
     WebElement dateOfBirth;
-    @FindBy(how = How.XPATH,using = "//select[@title='Select year']")     //*[contains(text(),'here')]
+    @FindBy(how = How.XPATH,using = Configuration.selectYear)     //*[contains(text(),'here')]
     WebElement selectYear;
-    @FindBy(how = How.XPATH,using = "//select[@title='Select month']")
+    @FindBy(how = How.XPATH,using = Configuration.selectMonth)
     WebElement selectMonth;
-    @FindBy(how = How.CSS,using = "#traveller > div > form > div:nth-child(2) > div > div:nth-child(3) > div:nth-child(1) > div.input-group > ngb-datepicker > div.ngb-dp-months > div > ngb-datepicker-month-view > div:nth-child(4) > div:nth-child(4) > div")
+    @FindBy(how = How.CSS,using = Configuration.selectDay)
     WebElement selectDay;
-    @FindBy(how = How.CSS,using = "#traveller > div > form > div.row.ng-star-inserted > table > tbody > tr:nth-child(3) > td.ng-star-inserted")
+    @FindBy(how = How.CSS,using = Configuration.verifyAmt)
     WebElement verifyAmt;
-    @FindBy(how = How.XPATH,using = "//*[@id=\"traveller\"]/div/form/div[11]/div/button")
+    @FindBy(how = How.XPATH,using = Configuration.book)
     WebElement book;
-    @FindBy(how = How.CSS,using = "#traveller > div > form > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div.inlineErrMgs.ng-star-inserted > span")
+    @FindBy(how = How.CSS,using = Configuration.error)
     WebElement error;
 
     public Itinerary(WebDriver driver)

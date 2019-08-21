@@ -1,17 +1,15 @@
 package testCases;
 
-import base.BaseTC;
-import listener.Listener;
-import org.openqa.selenium.WebDriver;
+import dd_core.testCore;
+import listener.CustomListener;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.BookAFlight;
 import pageObjects.ModifySearch;
 
-@Listeners(Listener.class)
-public class ButtonsInModifySearchPageTC extends BaseTC {
+@Listeners(CustomListener.class)
+public class ButtonsInModifySearchPageTC extends testCore {
 
     ModifySearch pageInit;
     BookAFlight book;
@@ -23,7 +21,7 @@ public class ButtonsInModifySearchPageTC extends BaseTC {
 
         try {
             //pageInit= PageFactory.initElements(BaseTC.driver, ModifySearch.class);
-            book=PageFactory.initElements(BaseTC.driver,BookAFlight.class);
+            book=PageFactory.initElements(testCore.driver,BookAFlight.class);
             pageInit=book.clickFlight();
             pageInit.countRadioButtons();
             pageInit.getRadioButtonText();

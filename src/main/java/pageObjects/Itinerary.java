@@ -81,13 +81,13 @@ public class Itinerary  {
         }
     }
 
-    public void selectDOB() {
+    public void selectDOB(String dyear,String dmonth) {
 
         dateOfBirth.click();
         select = new Select(selectYear);
-        select.selectByValue("1992");
+        select.selectByValue(dyear);
         select = new Select(selectMonth);
-        select.selectByValue("12");
+        select.selectByValue(dmonth);
         selectDay.click();
 
 
@@ -97,10 +97,10 @@ public class Itinerary  {
         select.selectByValue(male);
     }
 
-    public void selectCountryCode() {
+    public void selectCountryCode(String countrycode) {
 
         select = new Select(countryCode);
-        select.selectByValue("99: Object");
+        select.selectByValue(countrycode);
 
     }
 
@@ -150,12 +150,12 @@ public class Itinerary  {
         billPhNumber.sendKeys(num);
     }
 
-    public void setBillCountry() throws InterruptedException {
+    public void setBillCountry(String billc,String bills) throws InterruptedException {
         select = new Select(billCountry);
-        select.selectByValue("99: Object");
+        select.selectByValue(billc);
         Thread.sleep(3000);
         select = new Select(billState);
-        select.selectByValue("West Bengal");
+        select.selectByValue(bills);
     }
 
     public String verifyFare(){

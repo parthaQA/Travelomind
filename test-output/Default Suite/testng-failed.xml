@@ -5,9 +5,10 @@
     <classes>
       <class name="testCases.SeachingFlightsFromModifySearchPageTc">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="searchFlight"/>
-          <include name="takeScreenshot"/>
+          <include name="init"/>
+          <include name="searchFlight" invocation-numbers="0"/>
+          <include name="startDriver"/>
+          <include name="quitDriver"/>
         </methods>
       </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
     </classes>

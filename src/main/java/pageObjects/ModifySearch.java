@@ -64,6 +64,8 @@ public class ModifySearch {
     List<WebElement> radioBtnCounts;
     List<WebElement> radioBtntext;
     Select select;
+    String tagname="input";
+    String tag="span";
 
 
     public ModifySearch(WebDriver driver) {
@@ -81,7 +83,7 @@ public class ModifySearch {
 
             if (radio.isEnabled()){
 
-                radioBtnCounts=radio.findElements(By.tagName("input"));
+                radioBtnCounts=radio.findElements(By.tagName(tagname));
                 System.out.println(radioBtnCounts.size());
 
             }
@@ -101,7 +103,7 @@ public class ModifySearch {
         try
         {
         if (radio.isEnabled()){
-            radioBtntext=radio.findElements(By.tagName("span"));
+            radioBtntext=radio.findElements(By.tagName(tag));
 
             for(int i=0;i<radioBtntext.size();i++)
 
@@ -148,11 +150,11 @@ public class ModifySearch {
 
     }
 
-    public String selectOriginPlace() throws InterruptedException {
+    public String selectOriginPlace(String Origin) throws InterruptedException {
 
         Thread.sleep(10000);
         origin.clear();
-        origin.sendKeys("new york");
+        origin.sendKeys(Origin);
         WebElement originAirport= originTmenu.findElement(By.xpath("//span[contains(text(),'JFK')]"));
         action.moveToElement(originAirport).click();
         System.out.println("Origin Airport is selected");
@@ -160,24 +162,26 @@ public class ModifySearch {
 
     }
 
-    public String selectReturnPlace() throws InterruptedException {
+    public String selectReturnPlace(String dest) throws InterruptedException {
 
         destination.clear();
-        destination.sendKeys("kolkata");
-        WebElement destionationAirport= destionationTmenu.findElement(By.xpath("//span[contains(text(),'CCU')]"));
+        destination.sendKeys(dest);
+        WebElement destionationAirport= destionationTmenu.findElement(By.xpath("//span[contains(text(),'TYO')]"));
+        Thread.sleep(2000);
         action.moveToElement(destionationAirport).click();
         System.out.println("Kolkata Airport is selected");
         return destionationAirport.getText();
     }
 
-    public void SelectDepartureDate() throws InterruptedException {
+    public void SelectDepartureDate(String Dmonth,String Dyear) throws InterruptedException {
+        Thread.sleep(2000);
         depart.click();
         action.moveToElement(month).click();
         select =new Select(month);
-        select.selectByValue("10");
+        select.selectByValue(Dmonth);
         action.moveToElement(year).click();
         select=new Select(year);
-        select.selectByValue("2019");
+        select.selectByValue(Dyear);
         date.click();
         //retrnDate.click();
 
@@ -185,16 +189,16 @@ public class ModifySearch {
     }
 
 
-    public void SelectReturnDate() throws InterruptedException{
+    public void SelectReturnDate(String Amonth,String Ayear) throws InterruptedException{
 
         WebElement retrnmonth=returnjourneydate.findElement(By.xpath("//select[@title='Select month']"));
         action.moveToElement(retrnmonth).click();
         select=new Select(retrnmonth);
-        select.selectByValue("12");
+        select.selectByValue(Amonth);
         WebElement retrnyear=returnjourneydate.findElement(By.xpath("//select[@title='Select year']"));
         action.moveToElement(retrnyear).click();
         select=new Select(retrnyear);
-        select.selectByValue("2019");
+        select.selectByValue(Ayear);
         retrnDate.click();
     }
 

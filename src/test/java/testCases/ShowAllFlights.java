@@ -1,34 +1,34 @@
 package testCases;
 
-import base.BaseTC;
-import listener.Listener;
-import org.openqa.selenium.WebDriver;
+
+import dd_core.testCore;
+import listener.CustomListener;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.ITestResult;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.BookAFlight;
 import pageObjects.FlightList;
 
-import java.util.Properties;
-
-@Listeners(Listener.class)
-public class ShowAllFlights extends BaseTC   {
+@Listeners(CustomListener.class)
+public class ShowAllFlights extends testCore {
 
 
     FlightList list;
     BookAFlight buk;
-    WebDriver driver;
+
+
 
 
 
     @Test
     public  void showAllFlights(){
         try {
-            buk=PageFactory.initElements(BaseTC.driver,BookAFlight.class);
+            buk=PageFactory.initElements(testCore.driver,BookAFlight.class);
             buk.clickFlight();
-            list=PageFactory.initElements(BaseTC.driver,FlightList.class);
+            list=PageFactory.initElements(testCore.driver,FlightList.class);
             list.findFlightList();
+
+
 
 
 

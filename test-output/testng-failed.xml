@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Travelomind(failed)">
+<suite name="Failed suite [Travelomind suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listener.CustomListener"/>
+  </listeners>
+  <test thread-count="5" name="SeachingFlightsFromModifySearchPage(failed)">
     <classes>
       <class name="testCases.SeachingFlightsFromModifySearchPageTc">
         <methods>
-          <include name="launchBrowser"/>
-          <include name="searchFlight"/>
-          <include name="takeScreenshot"/>
+          <include name="init"/>
+          <include name="searchFlight" invocation-numbers="0"/>
+          <include name="startDriver"/>
+          <include name="quitDriver"/>
         </methods>
       </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
     </classes>
-  </test> <!-- Travelomind(failed) -->
-</suite> <!-- Failed suite [Default Suite] -->
+  </test> <!-- SeachingFlightsFromModifySearchPage(failed) -->
+  <test thread-count="5" name="Rough(failed)">
+    <classes>
+      <class name="testCases.Rough">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- testCases.Rough -->
+    </classes>
+  </test> <!-- Rough(failed) -->
+</suite> <!-- Failed suite [Travelomind suite] -->

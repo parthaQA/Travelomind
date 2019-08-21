@@ -17,6 +17,8 @@ public class HomePageLinks {
     List<WebElement> anchor;
     @FindBy(how = How.TAG_NAME, using = Configuration.image)
     List<WebElement> image;
+    String href="href";
+    String src="src";
 
 
 
@@ -28,16 +30,16 @@ public class HomePageLinks {
 
         System.out.println(link.size());
         for(int i=0;i<link.size();i++){
-            System.out.println(link.get(i).getAttribute("href"));
+            System.out.println(link.get(i).getAttribute(href));
         }
 
         System.out.println(anchor.size());
         for(int i=0;i<anchor.size();i++){
-            System.out.println(anchor.get(i).getAttribute("href"));
+            System.out.println(anchor.get(i).getAttribute(href));
         }
         System.out.println(image.size());
         for(int i=0;i<image.size();i++){
-            System.out.println(image.get(i).getAttribute("src"));
+            System.out.println(image.get(i).getAttribute(src));
         }
 
     }

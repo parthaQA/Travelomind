@@ -3,20 +3,15 @@ package listener;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import dd_core.testCore;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import utilities.ExtentManager;
 import utilities.ExtentTestManager;
-import utilities.TestUtils;
+import utilities.CaptureScreenshots;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 
 public class CustomListener extends testCore implements ITestListener {
 
@@ -50,7 +45,7 @@ public class CustomListener extends testCore implements ITestListener {
     }
 
     public   void onTestFailure(ITestResult result) {
-        TestUtils capture=new TestUtils();
+        CaptureScreenshots capture=new CaptureScreenshots();
         capture.screenShot(result);
         ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
         ExtentTest test=extent.createTest(result.getMethod().getMethodName());

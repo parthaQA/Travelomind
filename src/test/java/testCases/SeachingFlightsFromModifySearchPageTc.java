@@ -6,6 +6,7 @@ import dd_core.testCore;
 import listener.CustomListener;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.BookAFlight;
@@ -19,12 +20,12 @@ public class SeachingFlightsFromModifySearchPageTc extends testCore {
 
     ModifySearch modify;
     BookAFlight book;
-    String expectedOrigin="JF";
+    String expectedOrigin="JFK";
     String expectedReturn="TYO";
 
-    @org.testng.annotations.DataProvider(name="getdata")
+    @DataProvider(name="getdata")
     public Object[][] getData() throws IOException {
-        return Data_Provider.getdata("ModifySearch");
+        return Data_Provider.getdata("BookRoundTrip");
     }
 
   @Test(dataProvider = "getdata")

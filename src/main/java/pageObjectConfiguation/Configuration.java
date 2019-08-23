@@ -86,6 +86,7 @@ public class Configuration {
     public static final String retrnYear = "div.container-fluid.noPaddingOnMobile div.boundaryCheck:nth-child(1) div.container-fluid.noPadding div.containerClass div.row.noMargin.contentBar:nth-child(4) div.noPadding.filterSidePanel:nth-child(2) div.filterWrapper form.ng-valid.ng-dirty.ng-touched div.row.mt-3:nth-child(3) div.col-sm-6.col-md-6:nth-child(2) div.input-group ngb-datepicker.dropdown-menu.show div.ngb-dp-header.bg-light ngb-datepicker-navigation:nth-child(1) ngb-datepicker-navigation-select.ngb-dp-navigation-select:nth-child(2) > select.custom-select:nth-child(2)";
     public static final String retrnDate = "//div[@class='btn-light ng-star-inserted'][contains(text(),'30')]";
     public static final String searchOnline = "//button[contains(text(),'Search Online')]";
+    public static final String allResult ="//span[contains(text(),'All Results')]";
 
 
 

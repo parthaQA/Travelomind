@@ -20,6 +20,7 @@ public class ModifySearch {
     WebDriverWait wait;
     JavascriptExecutor js;
 
+
      @FindBy(how = How.XPATH,using = Configuration.imagewait)
      WebElement imagewait;
     @FindBy(how = How.XPATH, using =Configuration.radio)
@@ -52,6 +53,8 @@ public class ModifySearch {
     WebElement date;
     @FindBy(how = How.XPATH, using = Configuration.returnjourneydate)
     WebElement returnjourneydate;
+    @FindBy(how = How.XPATH,using = Configuration.allResult)
+    WebElement allresults;
     //@FindBy(how = How.CSS,using = "div.container-fluid.noPaddingOnMobile div.boundaryCheck:nth-child(1) div.container-fluid.noPadding div.containerClass div.row.noMargin.contentBar:nth-child(4) div.noPadding.filterSidePanel:nth-child(2) div.filterWrapper form.ng-valid.ng-dirty.ng-touched div.row.mt-3:nth-child(3) div.col-sm-6.col-md-6:nth-child(2) div.input-group ngb-datepicker.dropdown-menu.show div.ngb-dp-header.bg-light ngb-datepicker-navigation:nth-child(1) ngb-datepicker-navigation-select.ngb-dp-navigation-select:nth-child(2) > select.custom-select:nth-child(1)")
     //WebElement retrnMonth;
     //@FindBy(how = How.CSS,using = "div.container-fluid.noPaddingOnMobile div.boundaryCheck:nth-child(1) div.container-fluid.noPadding div.containerClass div.row.noMargin.contentBar:nth-child(4) div.noPadding.filterSidePanel:nth-child(2) div.filterWrapper form.ng-valid.ng-dirty.ng-touched div.row.mt-3:nth-child(3) div.col-sm-6.col-md-6:nth-child(2) div.input-group ngb-datepicker.dropdown-menu.show div.ngb-dp-header.bg-light ngb-datepicker-navigation:nth-child(1) ngb-datepicker-navigation-select.ngb-dp-navigation-select:nth-child(2) > select.custom-select:nth-child(2)")
@@ -63,6 +66,8 @@ public class ModifySearch {
     WebElement searchOnline;
     List<WebElement> radioBtnCounts;
     List<WebElement> radioBtntext;
+    WebElement destionationAirport;
+    WebElement originAirport;
     Select select;
     String tagname="input";
     String tag="span";
@@ -71,9 +76,11 @@ public class ModifySearch {
     public ModifySearch(WebDriver driver) {
 
         this.driver = driver;
-        action=new Actions(this.driver);
-        wait=new WebDriverWait(this.driver,20);
-        js = (JavascriptExecutor)this.driver;
+        action = new Actions(this.driver);
+        wait = new WebDriverWait(this.driver, 180);
+        js = (JavascriptExecutor) this.driver;
+
+
     }
 
 
@@ -133,16 +140,18 @@ public class ModifySearch {
         }
     }
 
-    public void ButtonStatusToOneWay(){
-        if(oneWayButton.isSelected()) {
-            System.out.println("One way button is selected");
+    public void ButtonStatusToOneWay() throws InterruptedException {
 
-        }
-        else{
-            action=new Actions(this.driver);
-            action.moveToElement(oneWayButton).perform();
+        Thread.sleep(10000);
+        //action=new Actions(this.driver);
+        if (oneWayButton.isSelected()) {
+            System.out.println("One way Button is already selected");
+        } else {
+            wait.until(ExpectedConditions.elementToBeClickable(oneWayButton));
+            oneWayButton.click();
             System.out.println("one way button is clicked");
-    }}
+        }
+    }
 
     public void ButtonStatusToRoundTrip(){
 
@@ -152,10 +161,11 @@ public class ModifySearch {
 
     public String selectOriginPlace(String Origin) throws InterruptedException {
 
-        Thread.sleep(10000);
+        wait.until(ExpectedConditions.elementToBeClickable(allresults));
         origin.clear();
         origin.sendKeys(Origin);
-        WebElement originAirport= originTmenu.findElement(By.xpath("//span[contains(text(),'JFK')]"));
+        originAirport= originTmenu.findElement(By.xpath("//span[contains(text(),'NYC')]"));
+        wait.until(ExpectedConditions.visibilityOf(originAirport));
         action.moveToElement(originAirport).click();
         System.out.println("Origin Airport is selected");
         return originAirport.getText();
@@ -166,11 +176,28 @@ public class ModifySearch {
 
         destination.clear();
         destination.sendKeys(dest);
-        WebElement destionationAirport= destionationTmenu.findElement(By.xpath("//span[contains(text(),'TYO')]"));
-        Thread.sleep(2000);
+        Thread.sleep(5000);
+        destionationAirport= destionationTmenu.findElement(By.xpath("//span[contains(text(),'NYC')]"));
+        wait.until(ExpectedConditions.visibilityOf(destionationAirport));
         action.moveToElement(destionationAirport).click();
         System.out.println("Kolkata Airport is selected");
         return destionationAirport.getText();
+    }
+
+    public void sameOriginAndDestination(){
+
+        //if(originAirport.getText()==destionationAirport.getText()) {
+
+            Alert alert= driver.switchTo().alert();
+            wait.until(ExpectedConditions.alertIsPresent());
+            System.out.println(alert.getText());
+            alert.accept();
+
+
+
+        //}
+
+
     }
 
     public void SelectDepartureDate(String Dmonth,String Dyear) throws InterruptedException {
@@ -202,9 +229,11 @@ public class ModifySearch {
         retrnDate.click();
     }
 
-    public void ClickSearchOnline(){
+    public void ClickSearchOnline() throws InterruptedException {
 
         searchOnline.click();
+        sameOriginAndDestination();
+
 
     }
 

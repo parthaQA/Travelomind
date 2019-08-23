@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Travelomind(failed)">
     <classes>
-      <class name="testCases.SeachingFlightsFromModifySearchPageTc">
+      <class name="testCases.SearchResultForOneWayTrip">
         <methods>
+          <include name="SearchOneWayFlight" invocation-numbers="0"/>
           <include name="init"/>
-          <include name="searchFlight" invocation-numbers="0"/>
           <include name="startDriver"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
+      </class> <!-- testCases.SearchResultForOneWayTrip -->
     </classes>
   </test> <!-- Travelomind(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

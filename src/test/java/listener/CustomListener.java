@@ -47,11 +47,11 @@ public class CustomListener extends testCore implements ITestListener {
     public   void onTestFailure(ITestResult result) {
         CaptureScreenshots capture=new CaptureScreenshots();
         capture.screenShot(result);
-        ExtentTestManager.getTest().log(Status.FAIL, "Test Failed");
+        ExtentTestManager.getTest().log(Status.FAIL,"Test Failed"+result.getThrowable());
         ExtentTest test=extent.createTest(result.getMethod().getMethodName());
         try {
             test.addScreenCaptureFromPath("C:\\Users\\XPO8584\\IdeaProjects\\Travelomind\\Screenshots\\"+result.getMethod().getMethodName()+".jpeg");
-        } catch (IOException e) {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 

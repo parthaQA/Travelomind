@@ -4,25 +4,28 @@
   <listeners>
     <listener class-name="listener.CustomListener"/>
   </listeners>
-  <test thread-count="5" name="SeachingFlightsFromModifySearchPage(failed)">
+  <test thread-count="5" name="FilteringSearchResults(failed)">
     <classes>
-      <class name="testCases.SeachingFlightsFromModifySearchPageTc">
+      <class name="testCases.FilteringSearchResultsTC">
         <methods>
           <include name="init"/>
-          <include name="searchFlight" invocation-numbers="0"/>
+          <include name="filterSearch"/>
           <include name="startDriver"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
+      </class> <!-- testCases.FilteringSearchResultsTC -->
     </classes>
-  </test> <!-- SeachingFlightsFromModifySearchPage(failed) -->
-  <test thread-count="5" name="Rough(failed)">
+  </test> <!-- FilteringSearchResults(failed) -->
+  <test thread-count="5" name="SearchResultOneWayTrip(failed)">
     <classes>
-      <class name="testCases.Rough">
+      <class name="testCases.SearchResultForOneWayTrip">
         <methods>
-          <include name="test"/>
+          <include name="SearchOneWayFlight" invocation-numbers="0"/>
+          <include name="init"/>
+          <include name="startDriver"/>
+          <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.Rough -->
+      </class> <!-- testCases.SearchResultForOneWayTrip -->
     </classes>
-  </test> <!-- Rough(failed) -->
+  </test> <!-- SearchResultOneWayTrip(failed) -->
 </suite> <!-- Failed suite [Travelomind suite] -->

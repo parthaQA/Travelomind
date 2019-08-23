@@ -46,9 +46,9 @@
             <class name="testCases.SeachingFlightsFromModifySearchPageTc"></class>
         </classes>
     </test>
-    <test thread-count="1" name="Rough">
-        <classes>
-            <class name="testCases.Rough"></class>
-        </classes>
+    <test thread-count="1" name="SearchResultOneWayTrip">
+    <classes>
+        <class name="testCases.SearchResultForOneWayTrip"></class>
+    </classes>
     </test>
 </suite>

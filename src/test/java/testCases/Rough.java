@@ -6,9 +6,13 @@ import org.testng.annotations.Test;
 public class Rough {
 
 String ex="apple";
-String ac="greem";
+String ac="apple";
     @Test
-    public void test(){
+
+
+    public void test()
+    {
+        System.out.println("Partha Sen");
         Assert.assertEquals(ex,ac);
     }
 }

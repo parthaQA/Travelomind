@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Travelomind suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listener.CustomListener"/>
+  </listeners>
+  <test thread-count="5" name="SeachingFlightsFromModifySearchPage(failed)" verbose="0">
+    <classes>
+      <class name="testCases.SeachingFlightsFromModifySearchPageTc">
+        <methods>
+          <include name="init"/>
+          <include name="searchFlight" invocation-numbers="0"/>
+          <include name="startDriver"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- testCases.SeachingFlightsFromModifySearchPageTc -->
+    </classes>
+  </test> <!-- SeachingFlightsFromModifySearchPage(failed) -->
+</suite> <!-- Failed suite [Travelomind suite] -->

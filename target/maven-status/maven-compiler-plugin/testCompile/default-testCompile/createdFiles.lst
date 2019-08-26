@@ -9,6 +9,8 @@ utilities\ExtentManager.class
 testCases\Rough.class
 testCases\VoiceOfCustomerTC.class
 utilities\ExtentTestManager.class
+testCases\SearchResultForOneWayTrip.class
 testCases\ShowAllFlights.class
 testCases\BookFlight.class
+utilities\CaptureScreenshots.class
 testCases\SeachingFlightsFromModifySearchPageTc.class

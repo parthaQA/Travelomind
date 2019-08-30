@@ -28,7 +28,7 @@ public class SeachingFlightsFromModifySearchPageTc extends testCore {
         return Data_Provider.getdata("BookRoundTrip");
     }
 
-  @Test(dataProvider = "getdata")
+  @Test(dataProvider = "getdata",description = "test case to search flight from modify search section")
     public void searchFlight(String Origin,String Destination, String Dmonth, String Dyear,String Amonth,String Ayear) throws InterruptedException {
 
       try {

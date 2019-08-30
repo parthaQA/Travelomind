@@ -20,7 +20,7 @@ public class BillingDetail extends testCore {
     ITestResult result;
 
 
-  @Test(priority = 0)
+  @Test(priority = 0,description = "test case to display all the countries and state list from billing details section in Itinerary Page")
   public void getCountryList()  {
 
       try {

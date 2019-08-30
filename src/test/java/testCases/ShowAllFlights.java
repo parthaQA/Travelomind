@@ -20,7 +20,7 @@ public class ShowAllFlights extends testCore {
 
 
 
-    @Test
+    @Test(description = "to display all the flight details between two destination (round trip)")
     public  void showAllFlights(){
         try {
             buk=PageFactory.initElements(testCore.driver,BookAFlight.class);

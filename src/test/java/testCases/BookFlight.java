@@ -22,7 +22,7 @@ public class BookFlight extends testCore {
 
 
 
-    @Test(dataProvider = "getdata")
+    @Test(dataProvider = "getdata", description = "test case to book a flight between two destination")
     public void bookFlight(String firstname, String lastname,String city, String crdname, String securitycode, String phnum,
                            String emailid, String crdnumber, String address,String zip,String num,
                            String expiremnth,String expireyr, String male, String billcountry, String billstate,

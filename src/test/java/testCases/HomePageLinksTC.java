@@ -10,7 +10,7 @@ public class HomePageLinksTC extends testCore {
 
     HomePageLinks hPLinks;
 
-    @Test
+    @Test(description = "to check all the links from home page")
     public void displaylink(){
 
         hPLinks= PageFactory.initElements(testCore.driver,HomePageLinks.class);

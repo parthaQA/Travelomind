@@ -23,7 +23,7 @@ public class SearchResultForOneWayTrip extends testCore {
         return Data_Provider.getdata("BookOneWayTrip");
     }
 
-@Test(dataProvider = "getdata")
+@Test(dataProvider = "getdata", description = "test case to search a one way flight between two destinations")
     public void SearchOneWayFlight(String Origin,String Destination, String Dmonth, String Dyear) throws InterruptedException {
 
         book= PageFactory.initElements(testCore.driver,BookAFlight.class);

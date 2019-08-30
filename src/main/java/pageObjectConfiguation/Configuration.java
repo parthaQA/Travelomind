@@ -10,6 +10,17 @@ public class Configuration {
     public static final String mia="//*[contains(text(),'Miami (MIA)')";
     public static final String select="//img[@src='../../../assets/select.png']";
     public static final String searchPageFare = "body > app-root > div > app-all-flights > div.boundaryCheck > div > div > div.row.noMargin.contentBar > div.noPadding.contentPanel > div.tabPanel > div > div > div:nth-child(2) > div.flightDtl.relative.cursor.cheapest > div.row.priceHeader > div.col-md-6 > span.finalPrice";
+    public static final String domesticBlock= "pt-3";
+    public static final String selectdestinations="table-row";
+    public static final String domesticDestinations="tr";
+    public static final String last="]";
+    public static final String toast_noti="container-fluid noPaddingOnMobile";
+    public static final String firstpart = "document.getElementsByClassName('table-row')[";
+    public static final String lastpart = "].click()";
+    public static final String domestic="//div[@class='row hiddenBlock pt-3']//tbody";
+
+
+
 
     //FlightList
 

@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Travelomind suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listener.CustomListener"/>
-  </listeners>
-  <test thread-count="5" name="FilteringSearchResults(failed)">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Travelomind(failed)">
     <classes>
-      <class name="testCases.FilteringSearchResultsTC">
+      <class name="testCases.ClickOnAllDomesticDestinations">
         <methods>
           <include name="init"/>
-          <include name="filterSearch"/>
+          <include name="ClickOnAllFlights"/>
           <include name="startDriver"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.FilteringSearchResultsTC -->
+      </class> <!-- testCases.ClickOnAllDomesticDestinations -->
     </classes>
-  </test> <!-- FilteringSearchResults(failed) -->
-  <test thread-count="5" name="SearchResultOneWayTrip(failed)">
-    <classes>
-      <class name="testCases.SearchResultForOneWayTrip">
-        <methods>
-          <include name="SearchOneWayFlight" invocation-numbers="0"/>
-          <include name="init"/>
-          <include name="startDriver"/>
-          <include name="quitDriver"/>
-        </methods>
-      </class> <!-- testCases.SearchResultForOneWayTrip -->
-    </classes>
-  </test> <!-- SearchResultOneWayTrip(failed) -->
-</suite> <!-- Failed suite [Travelomind suite] -->
+  </test> <!-- Travelomind(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

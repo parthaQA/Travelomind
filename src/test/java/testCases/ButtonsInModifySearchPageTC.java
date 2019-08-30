@@ -15,7 +15,7 @@ public class ButtonsInModifySearchPageTC extends testCore {
     BookAFlight book;
 
 
-    @Test
+    @Test(description = "test case to check button status and button text from modify search section on flight details page")
     public void getButtonDetails(){
 
 

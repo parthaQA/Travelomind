@@ -1,7 +1,6 @@
 package utilities;
 
 import dd_core.testCore;
-import listener.CustomListener;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

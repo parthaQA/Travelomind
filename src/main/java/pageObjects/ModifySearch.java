@@ -1,5 +1,6 @@
 package pageObjects;
 
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjectConfiguation.Configuration;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
 public class ModifySearch {
@@ -73,18 +75,23 @@ public class ModifySearch {
     String tag="span";
 
 
+
+    //Defining the constructor for the ModifySearch class
+
     public ModifySearch(WebDriver driver) {
 
         this.driver = driver;
         action = new Actions(this.driver);
-        wait = new WebDriverWait(this.driver, 180);
+        wait = new WebDriverWait(this.driver, 30);
         js = (JavascriptExecutor) this.driver;
 
 
     }
 
 
-    public void countRadioButtons() {
+   //Method for counting the radio buttons in modify search section
+
+    public int countRadioButtons() {
         try {
 
 
@@ -94,51 +101,49 @@ public class ModifySearch {
                 System.out.println(radioBtnCounts.size());
 
             }
-            else
-                System.out.println("Button is disbled");
+
 
         } catch (Exception e) {
             e.printStackTrace();
 
         }
+        return radioBtnCounts.size();
+    }
+
+    //Method for displaying the radio buttons text in modify search section
+
+    public String getRadioButtonText() {
+
+        String radioButtonText=radio.getText();
+        System.out.println(radioButtonText );
+
+        return radioButtonText;
     }
 
 
-    public void getRadioButtonText(){
+    //Method for checking the radio buttons status in modify search section
 
+    public boolean VerifyButtonStatus() throws InterruptedException {
 
-        try
-        {
-        if (radio.isEnabled()){
-            radioBtntext=radio.findElements(By.tagName(tag));
-
-            for(int i=0;i<radioBtntext.size();i++)
-
-                System.out.println(radioBtntext.get(i).getText());
-
-        }
-        else
-            System.out.println("Button is disbled");
-
-    } catch (Exception e) {
-        e.printStackTrace();
-
-    }
-
-    }
-
-
-    public void VerifyButtonStatus(){
-
-        if(roundTripButton.isSelected())
-            System.out.println("round trip Button is selected");
-
-        else {
+        Thread.sleep(10000);
+        if(roundTripButton.isSelected()) {
+            System.out.println("round trip Button is already selected");
+            wait.until(ExpectedConditions.elementToBeClickable(oneWayButton));
             oneWayButton.click();
-            System.out.println("One way button is selected");
+            System.out.println("Switched to One Way button");
+        }
+        else if(oneWayButton.isSelected()){
+            System.out.println("One way button is already selected");
+            roundTripButton.click();
+            System.out.println("Switched to Round Trip button");
 
         }
+      return true;
     }
+
+
+
+    //Method for checking  the radio button status for One way Flight in modify search section
 
     public void ButtonStatusToOneWay() throws InterruptedException {
 
@@ -147,17 +152,33 @@ public class ModifySearch {
         if (oneWayButton.isSelected()) {
             System.out.println("One way Button is already selected");
         } else {
-            wait.until(ExpectedConditions.elementToBeClickable(oneWayButton));
+            wait.until(ExpectedConditions.elementSelectionStateToBe(oneWayButton,false));
             oneWayButton.click();
             System.out.println("one way button is clicked");
         }
+
+
     }
 
-    public void ButtonStatusToRoundTrip(){
 
+    //Method for checking  the radio button status for Round Trip in modify search section
+
+    public boolean ButtonStatusToRoundTrip(){
+
+        wait.until(ExpectedConditions.elementSelectionStateToBe(roundTripButton,false));
         roundTripButton.click();
+        System.out.println("Round Trip button is clicked");
+        do {
+            return true;
+        }
+        while (roundTripButton.isSelected());
+
 
     }
+
+
+
+    //Method for selecting and displaying the origin destination in modify search section
 
     public String selectOriginPlace(String Origin) throws InterruptedException {
 
@@ -172,6 +193,9 @@ public class ModifySearch {
 
     }
 
+
+    //Method for selecting and displaying the return destination in modify search section
+
     public String selectReturnPlace(String dest) throws InterruptedException {
 
         destination.clear();
@@ -183,6 +207,9 @@ public class ModifySearch {
         System.out.println("Kolkata Airport is selected");
         return destionationAirport.getText();
     }
+
+
+    //Method for checking alert and accepting alert on page while same place is chosen for origin and return field in modify search section
 
     public void sameOriginAndDestination(){
 
@@ -200,6 +227,9 @@ public class ModifySearch {
 
     }
 
+
+    //Method for selecting and clicking on departure date in modify search section
+
     public void SelectDepartureDate(String Dmonth,String Dyear) throws InterruptedException {
         Thread.sleep(2000);
         depart.click();
@@ -216,23 +246,28 @@ public class ModifySearch {
     }
 
 
+    //Method for selecting and clicking on return date in modify search section
+
     public void SelectReturnDate(String Amonth,String Ayear) throws InterruptedException{
 
-        WebElement retrnmonth=returnjourneydate.findElement(By.xpath("//select[@title='Select month']"));
+        WebElement retrnmonth=returnjourneydate.findElement(By.xpath(Configuration.returnMonth));
         action.moveToElement(retrnmonth).click();
         select=new Select(retrnmonth);
         select.selectByValue(Amonth);
-        WebElement retrnyear=returnjourneydate.findElement(By.xpath("//select[@title='Select year']"));
+        WebElement retrnyear=returnjourneydate.findElement(By.xpath(Configuration.returnYear));
         action.moveToElement(retrnyear).click();
         select=new Select(retrnyear);
         select.selectByValue(Ayear);
         retrnDate.click();
     }
 
+
+    //Method for clicking on Search Online button in modify search section
+
     public void ClickSearchOnline() throws InterruptedException {
 
         searchOnline.click();
-        sameOriginAndDestination();
+        //sameOriginAndDestination();
 
 
     }

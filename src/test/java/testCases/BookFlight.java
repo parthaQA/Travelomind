@@ -1,10 +1,10 @@
 package testCases;
 
+import listener.CustomListener;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import dataProvider.Data_Provider;
 import dd_core.testCore;
-import listener.CustomListener;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.Listeners;
@@ -39,10 +39,10 @@ public class BookFlight extends testCore {
             itr.setBillCountry(billcountry, billstate);
             itr.selectDOB(dobYear,dobMonth);
             itr.selectGender(male);
-            Assert.assertFalse(false);
            // itr.billingCountryState();
             itr.selectCardExpirationDetail(expiremnth,expireyr);
             itr.selectCountryCode(countrycode);
+
 
 
 

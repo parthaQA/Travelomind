@@ -4,20 +4,16 @@
   <listeners>
     <listener class-name="listener.CustomListener"/>
   </listeners>
-  <test thread-count="5" name="FilteringSearchResults(failed)">
+  <test thread-count="5" name="Travelomind(failed)">
     <classes>
-      <class name="testCases.FilteringSearchResultsTC">
+      <class name="testCases.BillingDetail">
         <methods>
           <include name="init"/>
-          <include name="filterSearch"/>
+          <include name="getCountryList"/>
           <include name="startDriver"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.FilteringSearchResultsTC -->
-    </classes>
-  </test> <!-- FilteringSearchResults(failed) -->
-  <test thread-count="5" name="SearchResultOneWayTrip(failed)">
-    <classes>
+      </class> <!-- testCases.BillingDetail -->
       <class name="testCases.SearchResultForOneWayTrip">
         <methods>
           <include name="SearchOneWayFlight" invocation-numbers="0"/>
@@ -27,5 +23,5 @@
         </methods>
       </class> <!-- testCases.SearchResultForOneWayTrip -->
     </classes>
-  </test> <!-- SearchResultOneWayTrip(failed) -->
+  </test> <!-- Travelomind(failed) -->
 </suite> <!-- Failed suite [Travelomind suite] -->

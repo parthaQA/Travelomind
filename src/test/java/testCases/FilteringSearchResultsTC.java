@@ -16,7 +16,7 @@ public class FilteringSearchResultsTC extends testCore {
     BookAFlight book;
     FilterYourPreferences filter;
 
-    @Test
+    @Test (description = "test case for clicking on first row flight from domestic airline section and listing out the search result details")
     public void filterSearch() throws InterruptedException {
 
         book=PageFactory.initElements(testCore.driver,BookAFlight.class);

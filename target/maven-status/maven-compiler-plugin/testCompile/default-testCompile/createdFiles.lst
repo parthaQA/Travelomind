@@ -10,7 +10,9 @@ testCases\Rough.class
 testCases\VoiceOfCustomerTC.class
 utilities\ExtentTestManager.class
 testCases\SearchResultForOneWayTrip.class
+testCases\ToDisplayDomesticDestinationFlightList.class
 testCases\ShowAllFlights.class
 testCases\BookFlight.class
 utilities\CaptureScreenshots.class
+testCases\ClickOnAllDomesticDestinations.class
 testCases\SeachingFlightsFromModifySearchPageTc.class

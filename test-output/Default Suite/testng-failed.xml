@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Travelomind(failed)">
     <classes>
-      <class name="testCases.ClickOnAllDomesticDestinations">
+      <class name="testCases.ClickOnRoundTripInModifySearch">
         <methods>
           <include name="init"/>
-          <include name="ClickOnAllFlights"/>
+          <include name="getButtonDetails"/>
           <include name="startDriver"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- testCases.ClickOnAllDomesticDestinations -->
+      </class> <!-- testCases.ClickOnRoundTripInModifySearch -->
     </classes>
   </test> <!-- Travelomind(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

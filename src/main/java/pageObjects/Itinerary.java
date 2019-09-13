@@ -1,6 +1,8 @@
 package pageObjects;
 
 
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,16 +12,21 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjectConfiguation.Configuration;
 
+import java.util.List;
+
 
 public class Itinerary  {
 
     Select select;
     WebDriver driver;
+    Logger logger;
 
     @FindBy(how = How.ID,using = Configuration.firstName)
     WebElement firstName;
-    @FindBy(how = How.XPATH,using = Configuration.middleName)
-    WebElement middleName;
+    @FindBy(how = How.XPATH,using = Configuration.mandatoryFName)
+    WebElement manFirstName;
+    @FindBy(how = How.CLASS_NAME,using = Configuration.middleName)
+    List<WebElement> middleName;
     @FindBy(how = How.ID,using = Configuration.lastName)
     WebElement lastName;
     @FindBy(how = How.CSS,using = Configuration.gender)
@@ -67,47 +74,80 @@ public class Itinerary  {
     @FindBy(how = How.CSS,using = Configuration.error)
     WebElement error;
 
+
+
+    //Defining the constructor for the Itinerary  class
+
     public Itinerary(WebDriver driver)
     {
         this.driver=driver;
     }
 
+    public Itinerary(Logger logger){
+        this.logger=logger;
+    }
 
+
+  //Method for providing first name and last name of passenger traveling in itinerary page
     public void passengerDetail(String firstname, String lastname) {
-        if (firstName.getText().isEmpty() & lastName.getText().isEmpty()) {
+        if (manFirstName.isDisplayed()) {
             firstName.sendKeys(firstname);
+        }
+        if (manFirstName.isDisplayed()){
             lastName.sendKeys(lastname);
 
         }
+        if (manFirstName.isDisplayed()) {
+            middleName.get(1).sendKeys("middle");
+        }
     }
+
+
+    //Method for selecting Date of Birth of passenger traveling in itinerary page
 
     public void selectDOB(String dyear,String dmonth) {
 
-        dateOfBirth.click();
-        select = new Select(selectYear);
-        select.selectByValue(dyear);
-        select = new Select(selectMonth);
-        select.selectByValue(dmonth);
-        selectDay.click();
+        if(manFirstName.isDisplayed()){
 
-
+            dateOfBirth.click();
+            select = new Select(selectYear);
+            select.selectByValue(dyear);
+            select = new Select(selectMonth);
+            select.selectByValue(dmonth);
+            selectDay.click();
+        }
     }
+
+
+  // Method for selecting Gender of passenger traveling in itinerary page
     public void selectGender(String male) {
-        select = new Select(gender);
-        select.selectByValue(male);
+
+
+        if (manFirstName.isDisplayed()) {
+            select = new Select(gender);
+            select.selectByValue(male);
+        }
     }
 
+
+
+  // Method for selecting Country Code of passenger in itinerary page
     public void selectCountryCode(String countrycode) {
 
-        select = new Select(countryCode);
-        select.selectByValue(countrycode);
+        if (manFirstName.isDisplayed()) {
 
+            select = new Select(countryCode);
+            select.selectByValue(countrycode);
+        }
     }
 
-      public void selectcardInfo(String crdHoldername,String Securitycode, String phnum, String emailid, String crdnumber) {
 
-          if (phoneNumber.getText().isEmpty() & email.getText().isEmpty() & cardNumber.getText().isEmpty()
-                  & cardHolderName.getText().isEmpty()) {
+    // Method for providing card details in billing section in itinerary page
+
+    public void selectcardInfo(String crdHoldername,String Securitycode, String phnum, String emailid, String crdnumber) {
+
+          if (manFirstName.isDisplayed()) {
+
               phoneNumber.sendKeys(phnum);
               email.sendKeys(emailid);
               cardNumber.sendKeys(crdnumber);
@@ -118,45 +158,83 @@ public class Itinerary  {
       }
 
 
-        public void selectCardExpirationDetail(String expiremnth,String expireyr){
+    // Method for selecting Card expiration details in itinerary page
 
-        select = new Select(month);
-        select.selectByValue(expiremnth);
-        select = new Select(year);
-        select.selectByValue(expireyr);
+      public void selectCardExpirationDetail(String expiremnth,String expireyr){
 
+          if (manFirstName.isDisplayed()) {
+
+              select = new Select(month);
+              select.selectByValue(expiremnth);
+
+          }
+          if (this.driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/div[1]/app-traveller-detail[1]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/div[1]/ngb-accordion[1]/div[1]/div[2]/div[1]/form[1]/div[4]/div[4]/div[1]/span[1]")).isDisplayed()) {
+              select = new Select(year);
+              select.selectByValue(expireyr);
+          }
     }
 
-    public void billingCountryState(){
-        try {
+
+
+    // Method for displaying all the Bill Countries and states in billing section of itinerary page
+
+    public int getbillCountry() throws InterruptedException {
+
             Thread.sleep(4000);
             select = new Select(billCountry);
             System.out.println("************Country List**************");
             System.out.println(billCountry.getText());
-            System.out.println("************State List**************");
-            select = new Select(billState);
-            System.out.println(billState.getText());
-        }catch (Exception e){
-            e.printStackTrace();
+            int count = billCountry.findElements(By.tagName("option")).size() - 1;
+            System.out.println(billCountry.findElements(By.tagName("option")).size() - 1);
+
+            return count;
+    }
+
+    // Method for displaying all the Bill  states in billing section of itinerary page.
+
+    public int getBillState(){
+
+        System.out.println("************State List**************");
+        select = new Select(billState);
+        System.out.println(billState.getText());
+        int count=billState.findElements(By.tagName("option")).size()-1;
+        System.out.println(billState.findElements(By.tagName("option")).size()-1);
+        return count;
+    }
+
+
+    // Method for providing billing address, city, zip code, ph nnumber of passenger in itinerary page
+
+    public void billInfo(String city, String address,String zip,String num) {
+
+        if (manFirstName.isDisplayed()) {
+
+            billAddress.sendKeys(address);
+            billCity.sendKeys(city);
+            zipCode.sendKeys(zip);
+            billPhNumber.sendKeys(num);
         }
-
-
     }
 
-    public void billInfo(String city, String address,String zip,String num){
-        billAddress.sendKeys(address);
-        billCity.sendKeys(city);
-        zipCode.sendKeys(zip);
-        billPhNumber.sendKeys(num);
-    }
+    // Method for selecting  Bill Country and state in billing section of itinerary page
 
     public void setBillCountry(String billc,String bills) throws InterruptedException {
-        select = new Select(billCountry);
-        select.selectByValue(billc);
-        Thread.sleep(3000);
-        select = new Select(billState);
-        select.selectByValue(bills);
+
+        if (manFirstName.isDisplayed()) {
+
+            select = new Select(billCountry);
+            select.selectByValue(billc);
+            Thread.sleep(3000);
+            select = new Select(billState);
+            select.selectByValue(bills);
+
+        }
+
     }
+
+
+
+    // Method for verifying the fare amount of itinerary page
 
     public String verifyFare(){
         return verifyAmt.getText();
@@ -164,6 +242,9 @@ public class Itinerary  {
 
 
     }
+
+
+    // Method for clicking on Confirm booking button
 
     public void confirmBooking(){
         book.submit();

@@ -48,9 +48,11 @@ public class Configuration {
     //Itinerary
 
     public static final String firstName = "nm0";
-    public static final String middleName = "//input[@type='text]'";
+    public static final String mandatoryFName="//span[contains(text(),'*')]";
+    public static final String middleName = "ng-valid";
     public static final String lastName = "lm0";
     public static final String gender = "#gender0";
+    public static final String undefined="undefined";
     public static final String countryCode = "contry";
     public static final String phoneNumber = "phn";
     public static final String email = "eml";
@@ -98,6 +100,9 @@ public class Configuration {
     public static final String retrnDate = "//div[@class='btn-light ng-star-inserted'][contains(text(),'30')]";
     public static final String searchOnline = "//button[contains(text(),'Search Online')]";
     public static final String allResult ="//span[contains(text(),'All Results')]";
+    public static final String returnMonth="//select[@title='Select month']";
+    public static final String returnYear="//select[@title='Select year']";
+
 
 
 

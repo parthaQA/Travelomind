@@ -12,7 +12,7 @@ public class ClickOnAllDomesticDestinations extends testCore {
 
     BookAFlight book;
 
-    @Test
+    @Test(description = "test case for clicking on all domestic flights from home page one at a time")
     public void ClickOnAllFlights() throws InterruptedException {
 
         book = PageFactory.initElements(testCore.driver, BookAFlight.class);

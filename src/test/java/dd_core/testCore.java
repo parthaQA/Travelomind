@@ -1,34 +1,28 @@
 package dd_core;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.paulhammant.ngwebdriver.NgWebDriver;
 import excelReader.ExcelReader;
-import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.IResultMap;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-import org.testng.Reporter;
+import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import utilities.ExtentManager;
+import listener.CustomListener;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Date;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
+
 
 public class testCore {
 
@@ -38,17 +32,17 @@ public class testCore {
    public static ExcelReader excel=null;
     public static WebDriverWait wait;
     public static Actions action;
-    NgWebDriver ngdriver=new NgWebDriver((JavascriptExecutor)driver);
+    public static NgWebDriver ngdriver=new NgWebDriver((JavascriptExecutor)driver);
     JavascriptExecutor js= (JavascriptExecutor)driver;
-    FileInputStream fis;
+    public static FileInputStream fis;
     public static String screenshotName;
     public static ExtentReports extent;
-    public static Logger log;
-    public static ExtentTest tes;
+    public static Logger logger = LogManager.getLogger();
+
 
 
     @BeforeSuite
-    public void init() throws IOException {
+    public static void init() throws IOException {
 
 
 
@@ -82,18 +76,23 @@ public class testCore {
 
 
     @BeforeMethod
-    public static void startDriver() throws IOException {
+    public static void startDriver() throws IOException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
 
         driver.get(config.getProperty("testsite"));
+        logger.info("start of execution");
     }
 
+    public static void EndOfTest(){
+        logger.info("End of execution");
+
+    }
 
 
 
     @AfterSuite
     public  void quitDriver(){
 
-        Reporter.log("*******End of Test Suite***********");
         //driver.quit();
 
     }

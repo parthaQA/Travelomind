@@ -5,50 +5,8 @@
     <listeners>
         <listener class-name="listener.CustomListener"/>
     </listeners>
-    <test thread-count="1" name="BookFlight">
-        <classes>
-            <class name="testCases.BookFlight"></class>
+    <test thread-count="1" name="Travelomind">
 
-        </classes>
-    </test>
-    <test thread-count="1" name="BillingDetail">
-        <classes>
-            <class name="testCases.BillingDetail"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="ShowAllFlight">
-        <classes>
-            <class name="testCases.ShowAllFlights"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="ButtonsInModifySearchPage">
-        <classes>
-            <class name="testCases.ButtonsInModifySearchPageTC"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="VoiceOfCustomer">
-        <classes>
-            <class name="testCases.VoiceOfCustomerTC"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="FilteringSearchResults">
-        <classes>
-            <class name="testCases.FilteringSearchResultsTC"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="HomePageLinks">
-        <classes>
-            <class name="testCases.HomePageLinksTC"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="SeachingFlightsFromModifySearchPage">
-        <classes>
-            <class name="testCases.SeachingFlightsFromModifySearchPageTc"></class>
-        </classes>
-    </test>
-    <test thread-count="1" name="SearchResultOneWayTrip">
-    <classes>
-        <class name="testCases.SearchResultForOneWayTrip"></class>
-    </classes>
+
     </test>
 </suite>

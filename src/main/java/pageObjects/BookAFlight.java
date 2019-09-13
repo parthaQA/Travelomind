@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -38,16 +39,18 @@ public class BookAFlight {
     @FindBy(how = How.CLASS_NAME,using = Configuration.selectdestinations)
     List<WebElement> selectDestinations;
 
-
-    WebElement destinations;
+    public static Logger logger;
+    public WebElement destinations;
     Actions actions;
     JavascriptExecutor js;
+    int rownum=0;
 
 
 
     WebDriverWait wait;
 
-    public BookAFlight(WebDriver driver) throws IOException {
+    //defining constructor for the BookAFlight class
+    public BookAFlight(WebDriver driver)  {
         this.driver = driver;
         wait=new WebDriverWait(this.driver,20);
         actions=new Actions(this.driver);
@@ -55,9 +58,16 @@ public class BookAFlight {
 
     }
 
+    //defining constructor for the BookAFlight class
+
+    public BookAFlight(Logger logger){
+        this.logger=logger;
+    }
 
 
 
+
+    //Method for clicking the 1st flight detail from domestic Flight section in Home Page for navigating to Search page
 
    public ModifySearch clickFlight()  {
         flight.click();
@@ -66,22 +76,28 @@ public class BookAFlight {
     }
 
 
-    public void popularDomesticDestinationList(){
+
+    //Method for displaying all domestic flights details from Domestic Flight section in Home Page
+
+    public int popularDomesticDestinationList(){
 
 
-       destinations=driver.findElement(By.xpath(Configuration.domesticBlock));
+     destinations=driver.findElement(By.className(Configuration.domesticBlock));
 
-        int rownum=0;
         for(int i=1;i<10;i++){
            String count= destinations.findElements(By.tagName(Configuration.domesticDestinations)).get(i).getText();
-            System.out.println(count);
+            //System.out.println(count);
+            this.logger.info(count);
             rownum++;
         }
 
-        System.out.println(rownum);
+        this.logger.info(rownum);
+        return rownum;
 
 
     }
+
+    //Method for clicking on  all domestic flights one at a time from Domestic Flight section in Home Page
 
     public void clickOnAllPopularDomesticDestinations() throws InterruptedException {
 
@@ -106,8 +122,7 @@ public class BookAFlight {
     }
 
 
-
-
+    //Method for clicking the first Select button in Search page for navigating to Itinerary Page
 
    public Itinerary clickSelect(){
         WebElement s;
@@ -116,6 +131,8 @@ public class BookAFlight {
 
         return PageFactory.initElements(driver,Itinerary.class);
     }
+
+    //Method for getting the fare amount of clicked flight
 
     public String verifySearchPageAmt(){
         return searchPageFare.getText();

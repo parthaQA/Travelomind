@@ -23,11 +23,15 @@ public class VoiceOfCustomer {
     WebElement forwardArrow;
 
 
+//Defining the constructor for the VoiceOfCustomer class
 
     public  VoiceOfCustomer(WebDriver driver){
         this.driver=driver;
     }
 
+
+
+    //Method for clicking on Voice of Customer menu in Home page
 
     public void clickVOC(){
 
@@ -38,6 +42,9 @@ public class VoiceOfCustomer {
             System.out.println("button is not enabled");
         }
     }
+
+
+    //Method for switcing to Voice of Customer window and returing back to Home page window.
 
     public void SwitchToVocTab() {
         try {

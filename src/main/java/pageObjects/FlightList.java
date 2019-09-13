@@ -21,12 +21,14 @@ public class FlightList {
 
 
 
-
+    //Defining the constructor for the FlightList  class
     public FlightList(WebDriver driver) {
         this.driver=driver;
         new WebDriverWait(driver,20);
     }
 
+
+    //method for displaying all the flights count appears on Search Page
     public void findFlightList() {
         try {
 

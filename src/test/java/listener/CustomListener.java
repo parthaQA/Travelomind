@@ -3,6 +3,8 @@ package listener;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import dd_core.testCore;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -17,37 +19,42 @@ public class CustomListener extends testCore implements ITestListener {
 
 
 
+
+
+
     public void onStart(ITestContext context) {
 
-        Reporter.log("*** Test Suite " + context.getName() + " started ***");
+
+
     }
 
     public void onFinish(ITestContext context) {
 
-        Reporter.log(("*** Test Suite " + context.getName() + " ending ***"));
         ExtentTestManager.endTest();
         ExtentManager.getInstance().flush();
     }
 
     public void onTestStart(ITestResult result) {
 
-        Reporter.log(("*** Running test method " + result.getMethod().getMethodName() + "..."));
-        try {
+        logger.info("*** Running test method " + result.getMethod().getMethodName() + "...");
+       try {
             ExtentTestManager.startTest(result.getMethod().getMethodName());
         } catch (IOException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
     }
 
     public void onTestSuccess(ITestResult result) {
 
-        ExtentTestManager.getTest().log(Status.PASS, "Test passed");
+        ExtentTestManager.getTest().log(Status.PASS, result.getMethod().getMethodName()+" passed");
+        logger.info(result.getMethod().getMethodName()+"test Passed");
     }
 
     public   void onTestFailure(ITestResult result) {
+        logger.info(result.getMethod().getMethodName()+"test Failed");
         CaptureScreenshots capture=new CaptureScreenshots();
         capture.screenShot(result);
-        ExtentTestManager.getTest().log(Status.FAIL,"Test Failed"+result.getThrowable());
+        ExtentTestManager.getTest().log(Status.FAIL,result.getMethod().getMethodName()+"Test Failed"+result.getThrowable());
         ExtentTest test=extent.createTest(result.getMethod().getMethodName());
         try {
             test.addScreenCaptureFromPath("C:\\Users\\XPO8584\\IdeaProjects\\Travelomind\\Screenshots\\"+result.getMethod().getMethodName()+".jpeg");
@@ -60,7 +67,7 @@ public class CustomListener extends testCore implements ITestListener {
     public void onTestSkipped(ITestResult result) {
 
 
-        ExtentTestManager.getTest().log(Status.SKIP, "Test Skipped");
+        ExtentTestManager.getTest().log(Status.SKIP, result.getMethod().getMethodName()+"Test Skipped");
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

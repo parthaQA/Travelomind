@@ -40,6 +40,7 @@ public class FilterYourPreferences {
 
 
 
+//Defining the constructor for the FilterYourPreferences class
 
     public FilterYourPreferences(WebDriver driver) {
 
@@ -50,6 +51,7 @@ public class FilterYourPreferences {
     }
 
 
+ // Method for displaying the details of departing airline in modify search Page.
     public void getDepartingFromAirlineDetails(){
 
         List <WebElement> departing=departingFrom.findElements(By.className(airline));
@@ -61,6 +63,7 @@ public class FilterYourPreferences {
 
     }
 
+    // Method for displaying the details of arriving airline in modify search Page.
     public void getArrivingAtAilineDetails(){
 
         List<WebElement> arriving=arrivingAt.findElements(By.className(airline));
@@ -74,6 +77,7 @@ public class FilterYourPreferences {
     }
 
 
+    // Method for displaying all the airline list in modify search Page.
     public void getAirlinesList(){
 
         List<WebElement> airlinenames=airlines.findElements(By.className(airline));
